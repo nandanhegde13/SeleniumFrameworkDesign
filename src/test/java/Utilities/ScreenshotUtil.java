@@ -8,7 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import Package1.BaseTest;
+import Base.BaseTest;
 
 public class ScreenshotUtil extends BaseTest {
 

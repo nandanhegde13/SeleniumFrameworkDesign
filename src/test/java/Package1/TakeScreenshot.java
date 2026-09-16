@@ -6,20 +6,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
+import Base.BaseTest;
+import Pages.LoginPage;
 import Utilities.ScreenshotUtil;
 
 import org.apache.commons.io.FileUtils;
 public class TakeScreenshot extends BaseTest {
-
+	
+	
 	@Test
 	public void screenshot() throws IOException
 	{
 		
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
-		//driver.findElement(By.id("Test"));
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.inputUserName();
 		
 		
 		
