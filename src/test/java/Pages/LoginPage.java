@@ -17,9 +17,9 @@ public class LoginPage {
 	@FindBy(id="inputUsername")
 	WebElement userNameField;
 	
-	public void inputUserName()
+	public void inputUserName(String userName)
 	{
-		userNameField.sendKeys("hegdenandan013@gmail.com");
+		userNameField.sendKeys(userName);
 	}
 
 }

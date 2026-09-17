@@ -25,8 +25,7 @@ public class TakeScreenshot extends BaseTest {
 		
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.inputUserName();
-		
+		loginPage.inputUserName("hegdenandan013@gmail.com");
 		
 		
 	}
