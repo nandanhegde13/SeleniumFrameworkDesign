@@ -6,7 +6,7 @@
       <class name="Package1.TakeScreenshot">
         <methods>
           <include name="launchBrowser"/>
-          <include name="screenshot" invocation-numbers="0"/>
+          <include name="calenderHandle"/>
         </methods>
       </class> <!-- Package1.TakeScreenshot -->
     </classes>

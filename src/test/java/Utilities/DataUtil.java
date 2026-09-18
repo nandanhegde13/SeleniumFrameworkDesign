@@ -1,6 +1,8 @@
 package Utilities;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -19,6 +21,8 @@ public class DataUtil {
 	@DataProvider(name="Test", parallel=true)
 	public static Object[][] getLoginData() throws EncryptedDocumentException, IOException
 	{
+//		FileReader file1 = new FileReader("src/test/resources/TestData/TestData.xlsx");
+//		File f = new File("C:\\Users\\NandanSH\\eclipse-workspace\\Framework.v1\\src\\test\\resources\\TestData\\TestData.xlsx");
 		FileInputStream file = new FileInputStream("src/test/resources/TestData/TestData.xlsx");
 		Workbook workbook = WorkbookFactory.create(file);
 		Sheet sheet = workbook.getSheet("Sheet1");

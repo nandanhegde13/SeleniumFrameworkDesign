@@ -9,14 +9,22 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import Base.BaseTest;
+import Base.DriverManager;
 
-public class ScreenshotUtil extends BaseTest {
+public class ScreenshotUtil {
 
 	public static String screenshotMethod() throws IOException
 	{
-		TakesScreenshot ts = (TakesScreenshot) driver;
+		TakesScreenshot ts = (TakesScreenshot) DriverManager.getDriver();
 	    File src = 	ts.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File("./pictures/image"+System.currentTimeMillis()+".png"));
-		return System.getProperty("user.dir")+"./pictures/image\"+System.currentTimeMillis()+\".png";
+	    String filePath = System.getProperty("user.dir")
+                + "/pictures/"      
+                + "_Thread-"
+                + Thread.currentThread().getId()
+                + "_"
+                + System.currentTimeMillis()
+                + ".png";
+		FileUtils.copyFile(src, new File(filePath));
+		return filePath;
 	}
 }
