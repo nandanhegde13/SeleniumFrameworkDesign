@@ -17,9 +17,13 @@ public class LoginPage {
 	@FindBy(id="inputUsername")
 	WebElement userNameField;
 	
-	public void inputUserName(String userName)
+	@FindBy(name="inputPassword")
+	WebElement passwordField;
+	
+	public void inputUserDetails(String userName,String password)
 	{
 		userNameField.sendKeys(userName);
+		passwordField.sendKeys(password);
 	}
 
 }

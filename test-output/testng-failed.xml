@@ -5,8 +5,8 @@
     <classes>
       <class name="Package1.TakeScreenshot">
         <methods>
-          <include name="screenshot"/>
           <include name="launchBrowser"/>
+          <include name="screenshot" invocation-numbers="0"/>
         </methods>
       </class> <!-- Package1.TakeScreenshot -->
     </classes>
